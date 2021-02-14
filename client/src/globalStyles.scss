@@ -1,0 +1,44 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.2rem;
+  width: inherit;
+}
+
+input {
+  margin: 0.6rem 0;
+  width: auto;
+  padding: 0.2rem;
+  font-size: 20px;
+  border: none;
+  border-bottom: 2px solid black;
+  color: black;
+  background-color: transparent;
+
+  &:focus {
+    outline: none;
+    border-bottom: 2px solid $primary;
+  }
+}
+
+select {
+  margin: 0.7rem 0;
+  padding: 0.25rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0;
+}

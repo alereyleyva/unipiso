@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Montserrat:wght@600&display=swap");
+
+$primary: #1890ff;
+$secondary: dodgerblue;
+$red: indianred;
+$background: #f5f6fa;
+
+// Global Styles
+@import "./globalStyles.scss";
+
+body {
+  background-color: $background;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+// Import Styles
+@import "items/Items.scss";
+@import "components/NavBar/NavBar.scss";
+@import "components/Gasto/Gasto.scss";
+@import "gastos/Gastos.scss";
+@import "cuentas/Cuentas.scss";
+@import "home/Home.scss";
+@import "components/PageNotFound/PageNotFound.scss";

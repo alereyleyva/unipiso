@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+
+.cuentas {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 20px;
+
+  &__user {
+    flex: 0.35;
+    text-align: center;
+
+    h2 {
+      font-family: "Fjalla One", sans-serif;
+    }
+
+    .positive {
+      color: seagreen;
+    }
+
+    .negative {
+      color: indianred;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .cuentas {
+    display: flex;
+    flex-direction: column;
+
+    &__user {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+}

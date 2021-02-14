@@ -1,0 +1,104 @@
+#gastos {
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  margin: 1.5rem auto;
+
+  h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 0.7rem;
+  }
+
+  #gastosform {
+    Button {
+      margin-top: 1rem;
+      width: auto;
+      height: auto;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #gastos {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    width: 95%;
+
+    #gastosform {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 30px;
+    }
+
+    #gastoslist {
+      padding-bottom: 2rem;
+      &__list {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: repeat(2, auto);
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  #gastos {
+    width: 100%;
+    justify-content: center;
+    font-size: 1rem;
+
+    #gastosform {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    #gastoslist {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 30px;
+
+      &__list {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: repeat(3, auto);
+      }
+    }
+  }
+}
+@media (min-width: 1200px) {
+  #gastos {
+    justify-content: center;
+    align-items: flex-start;
+
+    #gastosform {
+      width: 35%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    #gastoslist {
+      width: 60%;
+      margin-right: 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &__list {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        grid-template-rows: auto;
+      }
+    }
+  }
+}

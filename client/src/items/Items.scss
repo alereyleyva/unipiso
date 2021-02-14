@@ -1,0 +1,52 @@
+#items {
+  display: flex;
+
+  h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  &__form,
+  &__list {
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 40px auto;
+
+    Button {
+      font-size: 1.25rem;
+      margin: 1rem 0;
+      width: auto;
+      height: auto;
+    }
+  }
+
+  #item {
+    display: flex;
+    width: 70%;
+    margin: 8px auto;
+    align-items: center;
+    justify-content: space-between;
+
+    h3 {
+      font-size: 1.7rem;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #items {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    &__form,
+    &__list {
+      margin: 0 auto;
+      margin-top: 20px;
+      width: 100%;
+    }
+  }
+}
