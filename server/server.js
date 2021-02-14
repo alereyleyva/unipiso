@@ -29,7 +29,10 @@ app.use("/items", require("./Items/ItemRouter"));
 
 // Connection to DB
 mongoose
-  .connect(`mongodb://localhost:27017/${process.env.DB_NAME}`, mongoose_config)
+  .connect(
+    process.env.MONGODB_URI || `mongodb://localhost:27017/UniPisoDB`,
+    mongoose_config
+  )
   .then(() => {
     console.log("Connection to the UniPiso DB is successful!");
   })
