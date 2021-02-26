@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "database": "registration",
+            "username": "alereyleyva",
+            "password": "alitorey10",
+            "name": "Spring Auth"
+        }
+    ]
+}

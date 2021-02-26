@@ -61,7 +61,13 @@ function GastoForm() {
 
         <label htmlFor="price">
           Precio
-          <input type={"number"} min={0} ref={register} name={"price"} />
+          <input
+            type={"number"}
+            step={"0.01"}
+            min={0}
+            ref={register}
+            name={"price"}
+          />
         </label>
 
         <label htmlFor="type">
