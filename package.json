@@ -1,0 +1,27 @@
+{
+  "name": "unipiso",
+  "version": "1.0.0",
+  "description": "UniPiso App Repository",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build --workspace=client",
+    "start": "npm run start --workspace=server",
+    "dev": "npm run dev --workspace=server",
+    "start:client": "npm run start --workspace=client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AleReyLeyva/UniPiso.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AleReyLeyva/UniPiso/issues"
+  },
+  "homepage": "https://github.com/AleReyLeyva/UniPiso#readme"
+}
