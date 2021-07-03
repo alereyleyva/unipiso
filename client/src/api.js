@@ -1,6 +1,6 @@
-import axios from "axios";
+import axios from 'axios';
 
-const API = "https://unipiso-backend.herokuapp.com";
+const API = '/api';
 
 export default axios.create({
   baseURL: API,
