@@ -1,7 +1,8 @@
-const express = require("express");
-const mongoose = require("mongoose");
-const cors = require("cors");
-const dotenv = require("dotenv");
+const express = require('express');
+const mongoose = require('mongoose');
+const cors = require('cors');
+const dotenv = require('dotenv');
+const path = require('path');
 
 const app = express();
 
@@ -11,7 +12,7 @@ const mongoose_config = {
   useUnifiedTopology: true,
   useCreateIndex: true,
 };
-mongoose.set("useFindAndModify", false);
+mongoose.set('useFindAndModify', false);
 dotenv.config();
 
 // Middlewares
@@ -20,12 +21,17 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // Routes
-app.get("/", (req, res) => {
-  res.send("API de DiscoNet AppWeb");
+app.use('/api/users', require('./Users/UserRouter'));
+app.use('/api/gastos', require('./Gastos/GastosRouter'));
+app.use('/api/items', require('./Items/ItemRouter'));
+app.get('/api', (req, res) => {
+  res.send('<h1>Bienvenido a la API de UniPiso<h1/>');
 });
-app.use("/users", require("./Users/UserRouter"));
-app.use("/gastos", require("./Gastos/GastosRouter"));
-app.use("/items", require("./Items/ItemRouter"));
+
+app.use(express.static('../client/build'));
+app.get('*', function (req, res) {
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
 
 // Connection to DB
 mongoose
@@ -34,14 +40,14 @@ mongoose
     mongoose_config
   )
   .then(() => {
-    console.log("Connection to the UniPiso DB is successful!");
+    console.log('Connection to the UniPiso DB is successful!');
   })
   .catch((err) => console.error(err));
 
 // Server Initialization
-let port = process.env.PORT || 3000;
+let port = process.env.PORT || 3001;
 app.listen(port, () => {
-  console.log("Server on port", port);
+  console.log('Server on port', port);
 });
 
 module.exports = app;
