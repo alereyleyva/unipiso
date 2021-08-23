@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 .gasto {
   margin: 10px;
@@ -18,11 +18,12 @@
   &__date {
     color: dodgerblue;
     font-size: 1em;
+    text-align: center;
   }
 
   &__content {
     text-align: center;
-    font-family: "Lato", sans-serif;
+    font-family: 'Lato', sans-serif;
 
     h4 {
       font-size: 1.4em;
